@@ -9,9 +9,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final _formKey = GlobalKey<FormState>(); 
+  final _formKey = GlobalKey<FormState>();
   final TextEditingController _passwordController = TextEditingController();
-  
 
   @override
   void dispose() {
@@ -20,9 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _login() {
-    if (_formKey.currentState!.validate()) { 
-              
-    }
+    if (_formKey.currentState!.validate()) {}
   }
 
   @override
@@ -30,8 +27,9 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width / 3),
-          child: Form( 
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width / 3),
+          child: Form(
             key: _formKey,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -48,7 +46,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   autofocus: true,
                   enableSuggestions: false,
                   textAlign: TextAlign.center,
-
                   controller: _passwordController,
                   obscureText: true,
                   decoration: const InputDecoration(
@@ -57,13 +54,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.all(Radius.zero),
                     ),
                   ),
-                  validator: (value) { 
+                  validator: (value) {
                     if (value == null || value.isEmpty) {
                       return "Password cannot be empty baby girl!";
                     } else if (value.length < 6) {
                       return "Password must be at least 6 characters baby girl!";
                     }
-                    return null; 
+                    return null;
                   },
                 ),
 
@@ -75,8 +72,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     minimumSize: Size(double.infinity, 60),
                     shape: RoundedRectangleBorder(),
                   ),
-                  onPressed: _login, 
-                  child:  Text('L O G I N', style: TextStyle(fontSize: 24, fontFamily: GoogleFonts.jetBrainsMono().fontFamily,),),
+                  onPressed: _login,
+                  child: Text(
+                    'L O G I N',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                    ),
+                  ),
                 ),
               ],
             ),

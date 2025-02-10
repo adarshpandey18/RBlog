@@ -33,7 +33,6 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
@@ -52,10 +51,11 @@
       appId: "1:897268304613:web:7ac08f26e8e08a47f9220c",
       measurementId: "G-K78D9ZCLDK"
     };
-  
+    
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-  </script>
+    </script>
+    <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
