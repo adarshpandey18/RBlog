@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rblog/utils/text_string.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -35,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  'L O G I N',
+                  TextString.loginPageHeading,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 20),
@@ -74,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   onPressed: _login,
                   child: Text(
-                    'L O G I N',
+                    TextString.loginButtonText,
                     style: TextStyle(
                       fontSize: 24,
                       fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
